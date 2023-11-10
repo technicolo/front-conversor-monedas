@@ -1,4 +1,5 @@
-@use "./../../../../variables.scss";
+@use"./../../../../variables.scss";
+@use"./../../../../styles.scss";
 
 .container {
     display: flex;
@@ -27,4 +28,6 @@
   p{
     margin-bottom:30px ;
   }
-  
+  input{
+    background-color: variables.$color-inputs;
+  }
