@@ -5,12 +5,17 @@ const routes: Routes = [
   {
   path:"login",
   // canActivate: [usuarioSinLoguear],
-   loadChildren: ()=> import('./../app/public/pages/login/login.module').then(m => m.LoginModule)
+   loadChildren: ()=> import('./../app/pages/login/login.module').then(m => m.LoginModule)
   },
   {
     path:"register",
     // canActivate: [usuarioSinLoguear],
-     loadChildren: ()=> import('./../app/public/pages/register/register.module').then(m => m.RegisterModule)
+     loadChildren: ()=> import('./../app/pages/register/register.module').then(m => m.RegisterModule)
+    },
+    {
+    path:"planes",
+    // canActivate: [usuarioSinLoguear],
+     loadChildren: ()=> import('./../app/pages/planes/planes.module').then(m => m.PlanesModule)
     },
 ];
 

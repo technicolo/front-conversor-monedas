@@ -1,0 +1,34 @@
+.fondo-login {
+    background-color: #ccc;
+
+    text-align: center;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* Distribuir espacio uniformemente alrededor de los elementos */
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.fondo-login input {
+    margin: 10px 0;
+}
+
+.fondo-login button {
+    margin: 10px 0; /* Espacio arriba y abajo */
+    width: 100%; /* Ocupar todo el ancho disponible */
+    padding: 10px 0;
+    border: unset;
+}
+
+p {
+    margin-bottom: 30px;
+}
+
+
