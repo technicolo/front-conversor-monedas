@@ -6,7 +6,11 @@ const routes: Routes = [  {
   path:"",
   component: PrivateComponent,
   children:[
-    
+    {
+      path:"main-menu",
+      // canActivate: [usuarioSinLoguear],
+       loadChildren: ()=> import('./../pages/main-menu/main-menu.module').then(m => m.MainMenuModule)
+      },
   ]
 }];
 

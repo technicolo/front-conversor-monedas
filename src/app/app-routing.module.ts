@@ -17,6 +17,11 @@ const routes: Routes = [
     // canActivate: [usuarioSinLoguear],
      loadChildren: ()=> import('./../app/pages/planes/planes.module').then(m => m.PlanesModule)
     },
+    {
+      path:"private/main-menu",
+      // canActivate: [usuarioSinLoguear],
+       loadChildren: ()=> import('./private/private.module').then(m => m.PrivateModule)
+    },
 ];
 
 @NgModule({
