@@ -18,9 +18,14 @@ const routes: Routes = [
      loadChildren: ()=> import('./../app/pages/planes/planes.module').then(m => m.PlanesModule)
     },
     {
-      path:"private/main-menu",
+      path:"private",
       // canActivate: [usuarioSinLoguear],
        loadChildren: ()=> import('./private/private.module').then(m => m.PrivateModule)
+    },
+    {
+      path:"conversor",
+      // canActivate: [usuarioSinLoguear],
+       loadChildren: ()=> import('./pages/conversor/conversor.module').then(m => m.ConversorModule)
     },
 ];
 

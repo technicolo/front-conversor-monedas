@@ -1,0 +1,44 @@
+@use "./../../../variables.scss";
+
+.fondo-conversor {
+    background-color: #464646;
+    text-align: center;
+    height: 195vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* Distribuir espacio uniformemente alrededor de los elementos */
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    background-color: #D9D9D9;
+    justify-content: center;
+    align-items: center;
+    height: 420px;
+    width: 190px;
+    border-radius: 10px;
+    flex-direction: column;
+}
+.container-svg {
+    display: flex;
+    background-color: #D9D9D9;
+    justify-content: center;
+    align-items: center;
+    height: 420px;
+    width: 190px;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+

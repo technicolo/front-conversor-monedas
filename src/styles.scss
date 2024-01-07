@@ -26,6 +26,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	overflow-x: hidden;
+	width: 100vw;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 ol, ul {

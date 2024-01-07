@@ -7,6 +7,8 @@ import { HeaderComponent } from './public/components/header/header.component';
 import { FooterComponent } from './public/components/footer/footer.component';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,

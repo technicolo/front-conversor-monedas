@@ -7,7 +7,7 @@ const routes: Routes = [  {
   component: PrivateComponent,
   children:[
     {
-      path:"main-menu",
+      path:"private/app-main-menu",
       // canActivate: [usuarioSinLoguear],
        loadChildren: ()=> import('./../pages/main-menu/main-menu.module').then(m => m.MainMenuModule)
       },
