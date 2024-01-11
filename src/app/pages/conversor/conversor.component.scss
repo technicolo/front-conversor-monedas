@@ -11,13 +11,23 @@
     justify-content: space-around; /* Distribuir espacio uniformemente alrededor de los elementos */
     align-items: center;
 }
+.divisor{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #464646;
+    color: #464646;
+}
 
 .contador-usos{
     background-color: #464646;
     height: 50px;
-    width: 170px;
+    width: 200px;
     display: flex;
     justify-content: center;
+    padding-bottom: 50px;
 }
 
 .container {
@@ -25,9 +35,9 @@
     background-color: #D9D9D9;
     justify-content: center;
     align-items: center;
-    height: 650px;
+    height: 550px;
     width: 250px;
-    border-radius: 10px;
+    border-radius: 25px;
     flex-direction: column;
 }
 .container-svg {
@@ -35,14 +45,41 @@
     background-color: #D9D9D9;
     justify-content: center;
     align-items: center;
-    height: 190px;
+    height: 100px;
     width: 190px;
     border-radius: 10px;
     flex-direction: column;
 }
+.dolares-fondo{
+    padding-bottom: 15px;
+}
+
+#mon-fav{
+    display: flex;
+    flex-direction: column;
+    width: 94px;
+    height: 45px;
+}
+
+.botones{
+    background-color: #464646;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#paddingg{
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+}
 
 h3{
     display: flex;
+    color: #D9D9D9;
     justify-content: center;
     align-items: center;
     flex-direction: column;
