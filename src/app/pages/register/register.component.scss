@@ -1,33 +1,5 @@
-@use"./../../../variables.scss";
-@use"./../../../styles.scss";
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .fondo-login {
-    background-color: #ccc;
-    padding: 20px;
-    text-align: center;
-    height: 300px; /* Aumentar la altura del contenedor */
-    display: flex;
-    flex-direction: column; /* Cambiar el flujo a vertical */
-    justify-content: center;
-  }
-  
-  .fondo-login input {
-    margin: 10px 0;
-  }
-  
-  .fondo-login button {
-    margin-top: 10px;
-  }
-  p{
-    margin-bottom:30px ;
-  }
-  input{
-    background-color: variables.$color-inputs;
-  }
+@use"./../../../assets/styles/variables.scss";
+@use"./../../../assets/styles/forms.scss";
+.cartel{
+  padding-bottom: 20px;
+}

@@ -1,0 +1,41 @@
+@use"./variables.scss";
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .fondo-login {
+    background-color: #ccc;
+    padding: 20px;
+    text-align: center;
+    width: 300px; /* Añadido para limitar el ancho del fondo-login */
+    margin: 0 auto; /* Añadido para centrar el fondo-login horizontalmente */
+    
+    form.registro-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centrar los elementos del formulario en el eje X */
+      
+      input {
+        background-color: variables.$color-inputs;
+        margin: 10px 0;
+        width: 100%; /* Añadido para que los inputs ocupen el ancho completo */
+      }
+  
+      button {
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+  
+      p {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .escondido{
+    display: none;
+  }
+  

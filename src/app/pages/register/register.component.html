@@ -1,16 +1,23 @@
 <div class="container">
-    <div class="fondo-login">
-      <p>bienvenido</p>
-      <form action="">
-
+  <div class="fondo-login">
+    <form #registerForm="ngForm" (ngSubmit)="register()" class="registro-form">
+      <label for="user" class="cartel">Registrate, Ya!</label>
+        <label for="user" class="sr-only">Name de usuario</label>
+        <input type="text" name="user" id="user" placeholder="Usuario" autocomplete="username" minlength="4" required="true" [(ngModel)]="registerData.userName" #user="ngModel">
+        <p class="error" *ngIf="user.invalid && (user.touched || user.dirty)">Ingrese un Name de usuario válido</p>
+        <label for="Name" class="sr-only">Name</label>
+        <input type="text" name="Name" id="Name" placeholder="Name" autocomplete="Name" minlength="3" [(ngModel)]="registerData.Name" #Name="ngModel">
+        <p class="error" *ngIf="Name.invalid && (Name.touched || Name.dirty)">Ingrese un Name válido</p>
+        <label for="LastNameLastName
+        " class="sr-only">LastName</label>
+        <input type="text" name="apellido" id="apellido" placeholder="apellido" autocomplete="apellido" minlength="3" [(ngModel)]="registerData.LastName" #LastName="ngModel">
+        <p class="error" *ngIf="LastName.invalid && (LastName.touched || LastName.dirty)">Ingrese un apellido válido</p>
+        <label for="password" class="sr-only">Contraseña</label>
+        <input type="password" name="password" id="password" placeholder="Contraseña" autocomplete="current-password" minlength="8" [(ngModel)]="registerData.password" #password="ngModel">
+        <p class="error" *ngIf="password.invalid && (password.touched || password.dirty)">Ingrese una contraseña válida</p>
+        <button type="submit" [disabled]="registerForm.invalid">Registrarse</button>
+        <p class="escondido error">Iniciar sesión</p>
       </form>
-      <input type="text">
-      <input type="text">
-      <input type="text">
-      <input type="text">
-        <button>Iniciar sesión</button>
-        <p>tenes una cuenta? - 
-            <a [routerLink]="['/login']" 
-            routerLinkActive="router-link-active" >inicia sesion</a></p>
+      <p>¿Ya tenés una cuenta? - <a [routerLink]="['/login']" routerLinkActive="router-link-active">Iniciar sesión</a></p>
     </div>
   </div>
