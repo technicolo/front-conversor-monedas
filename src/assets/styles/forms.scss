@@ -7,7 +7,7 @@
     height: 100vh;
   }
   
-  .fondo-login {
+  .form-container {
     background-color: #ccc;
     padding: 20px;
     text-align: center;
@@ -39,3 +39,11 @@
     display: none;
   }
   
+  .sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    }
