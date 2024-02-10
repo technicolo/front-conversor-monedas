@@ -1,1 +1,1 @@
-export const API = "./../../assets/db"
+export const API = "https://localhost:7112/api/"

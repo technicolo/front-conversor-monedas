@@ -3,15 +3,15 @@
       <h1>Iniciar sesión</h1>
       <p>Ingresá tus credenciales para acceder al servicio de contactos.</p>
       <form #loginForm="ngForm" (ngSubmit)="login()" class="registro-form">
-        <label for="user" class="sr-only">Nombre de usuario</label>
-        <input type="text" name="user" id="user" [(ngModel)]="loginData.userName" #user="ngModel"
+        <label for="Email" class="sr-only">Email</label>
+        <input type="text" name="Email" id="Email" [(ngModel)]="loginData.Email" #Email="ngModel"
                placeholder="Usuario" autocomplete="username" required>
-        <p *ngIf="user.invalid && (user.dirty || user.touched)" class="error">Este campo es requerido</p>
+        <p *ngIf="Email.invalid && (Email.dirty || Email.touched)" class="error">Este campo es requerido</p>
   
-        <label for="password" class="sr-only">Contraseña</label>
-        <input type="password" name="password" id="password" placeholder="Contraseña"
-               autocomplete="current-password" required minlength="8" [(ngModel)]="loginData.password" #password="ngModel">
-        <p class="error" *ngIf="password.invalid && (password.dirty || password.touched)">La contraseña debe tener al menos 8 caracteres</p>
+        <label for="Password" class="sr-only">Contraseña</label>
+        <input type="Password" name="Password" id="Password" placeholder="Password"
+               autocomplete="current-Password" required minlength="5" [(ngModel)]="loginData.Password" #Password="ngModel">
+        <p class="error" *ngIf="Password.invalid && (Password.dirty || Password.touched)">La contraseña debe tener al menos 8 caracteres</p>
   
         <button type="submit" [disabled]="loginForm.invalid">Iniciar sesión</button>
         <p class="escondido error">Error al iniciar sesión</p>
