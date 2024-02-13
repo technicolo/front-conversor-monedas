@@ -192,46 +192,50 @@ export class ConversorComponent {
   }
   
   async confirmarConversion() {
-    // Actualizar el nombre de la moneda seleccionada
-    this.updateSelectedCurrencyName(this.conversion.sourceCurrencyId);
-    const sourceCurrencyName = this.selectedCurrencyName;
-  
-    // Obtener el nombre de la moneda de destino
+    // Obtener la moneda de origen y destino
+    const sourceCurrency = this.currencies.find(currency => currency.id === this.conversion.sourceCurrencyId);
     const targetCurrency = this.currencies.find(currency => currency.id === this.conversion.targetCurrencyId);
-    const targetCurrencyName = targetCurrency ? targetCurrency.name : '';
-  
+
+    // Validar que se encontraron ambas monedas
+    if (!sourceCurrency || !targetCurrency) {
+        generarMensajeError('No se encontraron las monedas seleccionadas');
+        return;
+    }
+
     // Simular la conversión utilizando las monedas de origen y destino
-    const simulatedResult = this.simulateConversion(this.conversion.originalAmount, sourceCurrencyName, targetCurrencyName);
-  
+    const simulatedResult = this.simulateConversion(this.conversion.originalAmount, sourceCurrency, targetCurrency);
+
     // Preparar los detalles de la conversión para mostrar en la alerta
     const confirmacion = await Swal.fire({
-      title: 'Confirmar conversión',
-      html: `
-        <p>Moneda de origen: ${sourceCurrencyName}</p>
-        <p>Moneda de destino: ${targetCurrencyName}</p>
-        <p>Monto a convertir: ${this.conversion.originalAmount}</p>
-        <p>Resultado simulado: ${simulatedResult}</p>
-      `,
-      icon: 'question',
-      showCancelButton: true,
-      confirmButtonText: 'Confirmar',
-      cancelButtonText: 'Cancelar',
+        title: 'Confirmar conversión',
+        html: `
+            <p>Moneda de origen: ${sourceCurrency.name}</p>
+            <p>Moneda de destino: ${targetCurrency.name}</p>
+            <p>Monto a convertir: ${this.conversion.originalAmount}</p>
+            <p>Resultado simulado: ${simulatedResult}</p>
+        `,
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        cancelButtonText: 'Cancelar',
     });
-  
+
     if (confirmacion.isConfirmed) {
-      // Realizar la conversión
-      this.convert();
+        // Realizar la conversión
+        this.convert();
     }
-  }
+}
   
-  simulateConversion(originalAmount: number, sourceCurrencyName: string, targetCurrencyName: string): number {
-    // Definir las tasas de cambio hacia y desde dólares (estas son tus tasas fijas)
-    const rateToUSD = 1.5; // Tasa de conversión hacia dólares (moneda fuente -> dólares)
-    const rateFromUSD = 0.75; // Tasa de conversión desde dólares (dólares -> moneda destino)
-  
+  simulateConversion(originalAmount: number, sourceCurrency: Currency, targetCurrency: Currency): number {
+    // Obtener la tasa de conversión desde la moneda de origen a USD
+    const rateToUSD = sourceCurrency.value;
+
+    // Obtener la tasa de conversión desde USD a la moneda de destino
+    const rateFromUSD = targetCurrency.value;
+
     // Calcular el resultado simulado de la conversión
     const simulatedResult = (originalAmount * rateToUSD) / rateFromUSD;
-  
+
     return simulatedResult;
-  }
+}
 }
