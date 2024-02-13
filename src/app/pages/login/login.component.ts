@@ -37,7 +37,7 @@ export class LoginComponent {
             this.cargando.set(false); 
           } else {
             setTimeout(() => {
-              this.router.navigate(["/planes"]);
+              this.router.navigate(["/conversor"]);
               this.cargando.set(false); 
             }, 1000);
           }

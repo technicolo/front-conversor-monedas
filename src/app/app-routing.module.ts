@@ -27,6 +27,11 @@ const routes: Routes = [
       // canActivate: [usuarioSinLoguear],
        loadChildren: ()=> import('./pages/conversor/conversor.module').then(m => m.ConversorModule)
     },
+    {
+      path:"preview-conversion",
+      // canActivate: [usuarioSinLoguear],
+       loadChildren: ()=> import('./pages/preview-conversion/preview-conversion.module').then(m => m.PreviewConversionModule)
+    },
 ];
 
 @NgModule({

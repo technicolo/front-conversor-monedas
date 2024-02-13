@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ConversorRoutingModule } from './conversor-routing.module';
 import { ConversorComponent } from './conversor.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ConversorComponent } from './conversor.component';
   ],
   imports: [
     CommonModule,
-    ConversorRoutingModule
+    ConversorRoutingModule,
+    FormsModule
   ]
 })
 export class ConversorModule { }

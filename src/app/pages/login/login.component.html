@@ -5,7 +5,7 @@
       <form #loginForm="ngForm" (ngSubmit)="login()" class="registro-form">
         <label for="Email" class="sr-only">Email</label>
         <input type="text" name="Email" id="Email" [(ngModel)]="loginData.Email" #Email="ngModel"
-               placeholder="Usuario" autocomplete="username" required>
+               placeholder="Email" autocomplete="email" required>
         <p *ngIf="Email.invalid && (Email.dirty || Email.touched)" class="error">Este campo es requerido</p>
   
         <label for="Password" class="sr-only">Contraseña</label>

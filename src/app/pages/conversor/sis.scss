@@ -1,9 +1,7 @@
-@use "./../../../assets/styles/variables.scss";
-
 .fondo-conversor {
     background-color: #464646;
     text-align: center;
-    height: 100vh;
+    height: 900px;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -13,7 +11,7 @@
 }
 .divisor{
     width: 200px;
-    height: 100px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +21,7 @@
 
 .contador-usos{
     background-color: #464646;
-    height: 50px;
+    height: 100px;
     width: 200px;
     display: flex;
     justify-content: center;
@@ -35,12 +33,22 @@
     background-color: #D9D9D9;
     justify-content: center;
     align-items: center;
-    height: 550px;
+    height: 600px;
     width: 250px;
     border-radius: 25px;
     flex-direction: column;
 }
 .container-svg {
+    display: flex;
+    background-color: #D9D9D9;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 190px;
+    border-radius: 10px;
+    flex-direction: column;
+}
+.container-svg-dolares{
     display: flex;
     background-color: #D9D9D9;
     justify-content: center;
@@ -70,8 +78,8 @@
 }
 
 #paddingg{
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding-bottom: 10px;
+
 
 }
 
@@ -112,6 +120,3 @@ h3{
     padding: 10px;
   }
   
-
-
-

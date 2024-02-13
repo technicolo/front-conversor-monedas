@@ -1,7 +1,10 @@
 @use"./../../../../assets/styles/variables.scss";
 footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     text-align: center;
-    background-color: variables.$color-forms-header ;
-    width: 100%;
-    height: 100%;
+    background-color: variables.$color-forms-header;
+    height: 25px; /* adjust the height as needed */
 }
