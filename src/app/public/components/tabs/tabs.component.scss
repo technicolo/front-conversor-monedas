@@ -2,11 +2,25 @@
 #container{
     display: flex;
     justify-content: space-around;
-    margin-left: 40px;   
-}
-
-.tab{
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    height: 130px;
+  }
+  
+  .tab{
     flex: 1;
+    display: flex;
     justify-content: center;
-
-}
+    align-items: center;
+    svg{
+      display: block;
+      margin: auto;
+      transition: 200ms ease-in-out;
+    }
+    transition: 200ms ease-in-out;
+  }
+  
+  .seleccionado{
+    background-color: rgba(180, 0, 159, 0.231); ;
+  }

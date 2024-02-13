@@ -1,8 +1,17 @@
 <div class="container">
     <div class="fondo-login">
-      <p>eliga un plan de suscripcion</p>
-      <button class="free-plan">plan free 10 usos por dia</button>
-      <button class="trial-plan">plan trial 100 usoso por dia</button>
-      <button class="premiun-plan">plan premiun usos ILIMITADOS! </button>
+        <div class="card" *ngFor="let subscription of subscriptions" >
+            <button class="card-button" (click)="editUserSubscription(subscription.id)" [class]="getSubscriptionClass(subscription)">
+            <div class="card-header" >
+                    <h3 class="card-title">{{subscription.name}}</h3>
+                    <p class="card-price">ARS <span>{{subscription.price}}</span>/mes</p>
+                </div>        
+                <div class="card-body">
+                    <ul class="card-features">
+                        <li>{{subscription.id !== 9 ? "✓ Hasta "+ subscription.amountOfConversions+" conversiones por mes" : "✓ Conversiones ilimitadas"}}</li>  
+                    </ul>
+                </div>
+            </button>
+        </div>
     </div>
   </div>

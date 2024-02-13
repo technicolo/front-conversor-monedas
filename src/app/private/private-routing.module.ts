@@ -11,6 +11,11 @@ const routes: Routes = [  {
       // canActivate: [usuarioSinLoguear],
        loadChildren: ()=> import('./../pages/main-menu/main-menu.module').then(m => m.MainMenuModule)
       },
+      {
+        path:"conversor",
+        // canActivate: [usuarioSinLoguear],
+         loadChildren: ()=> import('./../pages/conversor/conversor.module').then(m => m.ConversorModule)
+      },
   ]
 }];
 

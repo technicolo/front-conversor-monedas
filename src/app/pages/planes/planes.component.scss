@@ -1,16 +1,7 @@
+// Variables
 @use "./../../../assets/styles/variables.scss";
 
-.fondo-login {
-    background-color: #ccc;
-
-    text-align: center;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around; /* Distribuir espacio uniformemente alrededor de los elementos */
-    align-items: center;
-}
-
+// Estilos generales
 .container {
     display: flex;
     justify-content: center;
@@ -18,28 +9,67 @@
     height: 100vh;
 }
 
-.fondo-login input {
-    margin: 10px 0;
+.fondo-login {
+    background-color: #ccc;
+    text-align: center;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    // Estilos para elementos dentro de fondo-login
+    input {
+        margin: 10px 0;
+    }
+
+
+
+    button {
+        width: 100%;
+        border: unset;
+    }
 }
 
-.fondo-login button {
-    margin: 10px 0; /* Espacio arriba y abajo */
-    width: 100%; /* Ocupar todo el ancho disponible */
-    padding: 10px 0;
-    border: unset;
+// Estilos para tarjetas de suscripción
+.card {
+    width: 300px;
+    height: 160px;
+    border-radius: 15px; 
+    color: variables.$color-input-plan-premiun;
+    transition: transform 0.5s ease-out;
+    display: flex;
+    align-items: center;
+
+    // Estilos para encabezado de tarjeta
+    .card-header {
+        h3 {
+            font-weight: bold;
+        }
+
+        p {
+            font-weight: bold;
+        }
+    }
+
+    // Estilos para cuerpo de tarjeta
+    .card-body {
+        ul {
+            li {
+                font-weight: bold;
+            }
+        }
+    }
+    
 }
 
-p {
-    margin-top: 30px;
-    margin-bottom: 30px;
+.pro-plan {
+    background-color: variables.$color-input-plan-premiun
 }
 
-.free-plan{
-    background-color: variables.$color-input-planes ;
+.free-plan {
+    background-color: variables.$color-input-planes
 }
-.trial-plan{
-    background-color: variables.$color-input-plan-trial ;
-}
-.premiun-plan{
-    background-color: variables.$color-input-plan-premiun ;
+.trial-plan {
+    background-color: variables.$color-input-plan-trial
 }

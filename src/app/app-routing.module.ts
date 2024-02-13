@@ -22,11 +22,7 @@ const routes: Routes = [
       // canActivate: [usuarioSinLoguear],
        loadChildren: ()=> import('./private/private.module').then(m => m.PrivateModule)
     },
-    {
-      path:"conversor",
-      // canActivate: [usuarioSinLoguear],
-       loadChildren: ()=> import('./pages/conversor/conversor.module').then(m => m.ConversorModule)
-    },
+
     {
       path:"preview-conversion",
       // canActivate: [usuarioSinLoguear],
