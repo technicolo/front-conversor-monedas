@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SuccesComponent } from './succes.component';
+import { FavMonedasComponent } from './fav-monedas.component';
 
-const routes: Routes = [
+const routes: Routes =  [
   {
     path:"",
-    component: SuccesComponent
+    component: FavMonedasComponent
   }
 ];
-
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class SuccesRoutingModule { }
+export class FavMonedasRoutingModule { }

@@ -1,0 +1,55 @@
+<div class="page-container">
+    <div class="card">
+        <h1>Mi cuenta</h1>
+
+        <!-- Cabecera -->
+        <div class="header-container">
+            <div class="header-conver">
+                <h2>Conversiones restantes</h2>
+                <p>{{ user.subscriptionId === 9 ? 'Ilimitadas' : (remainingConversions < 0 ? 0 : remainingConversions) }}</p>
+            </div>
+        </div>
+
+
+        
+        <!-- Tabla monedas -->        
+
+                <div class="header-moneda">
+                    <h2>Monedas favoritas</h2>
+                    <button (click)="dialogAgregarMoneda.showModal()"><i class="fa-solid fa-plus" style="color: #ffffff;">+</i></button>
+                </div>
+                <!-- Modal para agregar monedas favoritas -->
+                <dialog method="dialog" #dialogAgregarMoneda>
+                    <app-favorite-currencies-list
+                    [noFavoriteCurrencies]="noFavoriteCurrencies()"
+                    (cerrar)="dialogAgregarMoneda.close()"
+                    (refresh)="fetchCurrencies()">
+                    </app-favorite-currencies-list>
+                </dialog>
+                <!-- Tabla -->
+                <div class="table-scroll">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Nombre</th>
+                            <th>Símbolo</th>
+                            <th>Índice</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let currency of favoriteCurrencies() ">
+                            <td><i class="fa-solid fa-star"></i></td>
+                            <td>{{currency.name}}</td>
+                            <td>{{currency.symbol}}</td>
+                            <td>{{currency.value}}</td>
+                            <td><button (click)="deleteFavoriteCurrency(currency.id)"><i class="fa-solid fa-trash" style="color: #ffffff;"></i></button></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            </div>
+        </div>
+
+ 

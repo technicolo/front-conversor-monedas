@@ -6,7 +6,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    width: fit-content; // El contenedor se ajustará al contenido que contiene
+    margin: 0 auto; // Para centrar el contenedor horizontalmente
+    /* Resto de estilos */
 }
 
 .fondo-login {
@@ -40,6 +42,7 @@
     transition: transform 0.5s ease-out;
     display: flex;
     align-items: center;
+    
 
     // Estilos para encabezado de tarjeta
     .card-header {
@@ -68,7 +71,14 @@
 }
 
 .free-plan {
-    background-color: variables.$color-input-planes
+    background-color: variables.$color-input-planes;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05); // Aumentar ligeramente el tamaño al acercar el mouse
+    }
+
 }
 .trial-plan {
     background-color: variables.$color-input-plan-trial

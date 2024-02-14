@@ -16,6 +16,10 @@ const routes: Routes = [  {
         // canActivate: [usuarioSinLoguear],
          loadChildren: ()=> import('./../pages/conversor/conversor.module').then(m => m.ConversorModule)
       },
+      {
+        path:"fav-monedas",
+        loadChildren: ()=> import('./../pages/fav-monedas/fav-monedas.module').then(m => m.FavMonedasModule)
+      },
   ]
 }];
 

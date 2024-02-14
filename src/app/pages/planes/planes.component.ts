@@ -47,7 +47,7 @@ export class PlanesComponent implements OnInit {
         case 'Trial':
             return 'trial-plan';
         default:
-            return ''; // Puedes devolver una clase por defecto si es necesario
+            return ''; 
     }
 }
 
@@ -95,7 +95,7 @@ export class PlanesComponent implements OnInit {
         this.userService.editUserSubscription(userId, subscriptionId).then((res) => {
           if (res) {
             // Redirigir al usuario a la página de inicio de sesión
-            this.router.navigate(['/conversor']);
+            this.router.navigate(['/private/conversor']);
           } else {
             // Mostrar un mensaje de error en caso de fallo
             Swal.fire(

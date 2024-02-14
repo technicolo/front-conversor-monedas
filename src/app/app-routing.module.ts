@@ -23,11 +23,7 @@ const routes: Routes = [
        loadChildren: ()=> import('./private/private.module').then(m => m.PrivateModule)
     },
 
-    {
-      path:"preview-conversion",
-      // canActivate: [usuarioSinLoguear],
-       loadChildren: ()=> import('./pages/preview-conversion/preview-conversion.module').then(m => m.PreviewConversionModule)
-    },
+
 ];
 
 @NgModule({

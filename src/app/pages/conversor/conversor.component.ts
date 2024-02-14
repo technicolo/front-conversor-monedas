@@ -60,6 +60,7 @@ export class ConversorComponent {
     convertedAmount: 0,
     date: new Date()
   }   
+
   selectedCurrencyName: string = ''; // Variable para almacenar el nombre de la moneda seleccionada
 
     // Método para actualizar el nombre de la moneda seleccionada
@@ -70,7 +71,14 @@ export class ConversorComponent {
         } else {
             this.selectedCurrencyName = '';
         }
-    }
+  }
+
+  navegar(direccion:string){
+    //Cambiar de página
+    this.router.navigate([direccion])
+    console.log(direccion)
+  }
+
 
 
     

@@ -1,0 +1,198 @@
+@use './../../../assets/styles/variables.scss';
+
+.table-scroll {
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+    max-height: 300px; /* Establece una altura máxima para el contenedor */
+}
+
+.table {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    border-collapse: collapse;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+}
+
+.page-container {
+    background-color: #464646;
+    text-align: center;
+    height: 100vw;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around; /* Distribuir espacio uniformemente alrededor de los elementos */
+    align-items: center;
+}
+
+.card{
+    background-color: #ccc;
+    padding: 20px;
+    height: auto;
+    text-align: center;
+    width: 400px; /* Añadido para limitar el ancho del fondo-login */
+    margin: 0 auto; /* Añadido para centrar el fondo-login horizontalmente */
+}
+
+h1{
+    
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    border-radius: 10px;
+    padding: 20px 0;
+    width: 100%;
+    margin: auto;
+}
+
+.header-sub{
+    
+    text-align: start;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.body-sub {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    button {
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+    i {
+        font-size: 18px;
+    }
+}
+
+#selectSubs {
+   
+    border: none;
+    color: #F8F9FA;
+    font-size: 26px;
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    cursor: pointer;
+}
+
+#selectSubs:disabled {
+    cursor: not-allowed;
+    opacity: 0.90;
+}
+
+.header-conver{
+    
+    text-align: start;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+    .header-sub h2,
+    .header-conver h2,
+    .tab-money-content h2{
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 15px;
+    }
+
+    .header-sub p,
+    .header-conver p{
+        font-size: 26px;
+        font-weight: 700;
+    }
+
+.tab-money-container{
+   
+    border-radius: 10px;
+    padding: 20px 0;
+    width: 100%;
+    margin: auto;
+}
+
+.tab-money-content{
+    color: white;
+    padding: 0 20px;
+}
+
+    .paginate {
+        width: 300px;
+        text-align: end;  
+    }
+
+.header-moneda {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    button {
+        
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background-color: variables.$color-input-plan-premiun;
+    }
+    i {
+        text-align: center;
+        font-size: 18px;
+        color: grey;
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+  }
+  
+  .table th {
+    text-align: start;
+    color: white; 
+    padding-bottom: 10px; 
+  }
+  
+  .table td {
+    padding: 5px;
+    button {
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+    i {
+        font-size: 14px;
+    }
+  }
+  
+
+
+.tab-hist-container{
+
+    border-radius: 10px;
+    padding: 20px 0;
+    width: 100%;
+    margin: auto;
+    margin-top: 25px;
+}
+
+dialog {
+    border: none;
+    padding: 0;
+    border-radius: 15px;
+
+}

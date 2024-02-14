@@ -16,12 +16,12 @@
         <p class="error" *ngIf="FirstName.invalid && (FirstName.touched || FirstName.dirty)">Ingrese un nombre valido</p>
         
         <label for="LastName" class="sr-only">apellido</label>
-        <input type="LastName" name="LastName" id="LastName" placeholder="LastName" autocomplete="LastName" minlength="8" [(ngModel)]="registerData.LastName" #LastName="ngModel">
+        <input type="LastName" name="LastName" id="LastName" placeholder="LastName" autocomplete="LastName" minlength="5" [(ngModel)]="registerData.LastName" #LastName="ngModel">
         <p class="error" *ngIf="LastName.invalid && (LastName.touched || LastName.dirty)">Ingrese un apellido valido</p>
         
         <label for="Password" class="sr-only">Contraseña</label>
-        <input type="Password" name="Password" id="Password" placeholder="Password" autocomplete="Password" minlength="8" [(ngModel)]="registerData.Password" #Password="ngModel">
-        <p class="error" *ngIf="Password.invalid && (Password.touched || Password.dirty)">Ingrese un apellido valido</p>
+        <input type="Password" name="Password" id="Password" placeholder="Password" autocomplete="Password" minlength="5" [(ngModel)]="registerData.Password" #Password="ngModel">
+        <p class="error" *ngIf="Password.invalid && (Password.touched || Password.dirty)">Ingrese una contraseña valida</p>
 
         <button type="submit">Registrate</button>
         <p *ngIf="errorRegister()" class="error">Error en el registro</p>
