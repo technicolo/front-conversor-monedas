@@ -55,7 +55,7 @@ export class RegisterComponent {
       if(res) {
         setTimeout(() => {
           this.cargando.set(false);
-          this.router.navigate(["/planes"]);
+          this.router.navigate(["/login"]);
         }, 1000);
       }
       else {

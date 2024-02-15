@@ -121,7 +121,7 @@ h1{
 }
 
 .tab-money-content{
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 0 20px;
 }
 
@@ -143,11 +143,7 @@ h1{
         cursor: pointer;
         background-color: variables.$color-input-plan-premiun;
     }
-    i {
-        text-align: center;
-        font-size: 18px;
-        color: grey;
-    }
+ 
 }
 
 button {
@@ -168,11 +164,11 @@ button {
   }
   
   .table td {
-    padding: 5px;
+    padding: 10px;
     button {
-        border: none;
-        background: none;
+        height: 15%;
         cursor: pointer;
+        background-color: #464646;
     }
     i {
         font-size: 14px;
