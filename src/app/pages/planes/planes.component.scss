@@ -8,7 +8,6 @@
     align-items: center;
     width: fit-content; // El contenedor se ajustará al contenido que contiene
     margin: 0 auto; // Para centrar el contenedor horizontalmente
-    /* Resto de estilos */
 }
 
 .fondo-login {
@@ -30,6 +29,9 @@
     button {
         width: 100%;
         border: unset;
+    }
+    button.back{
+        padding-bottom: 20px ;
     }
 }
 
@@ -67,7 +69,14 @@
 }
 
 .pro-plan {
-    background-color: variables.$color-input-plan-premiun
+    background-color: variables.$color-input-plan-premiun;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05); // Aumentar ligeramente el tamaño al acercar el mouse
+    }
+
 }
 
 .free-plan {
@@ -81,5 +90,12 @@
 
 }
 .trial-plan {
-    background-color: variables.$color-input-plan-trial
+    background-color: variables.$color-input-plan-trial;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05); // Aumentar ligeramente el tamaño al acercar el mouse
+    }
+
 }

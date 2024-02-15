@@ -1,4 +1,8 @@
-<p>main-menu works!</p>
-
-<!-- el private deberia cargar el main menu pero este solo carga el private en lugar de cargar el menu y el
-private , en el private estarian los iconos que te llevarian por toda la app  -->
+<div class="fondo-conversor">
+    <div class="contador-usos">
+        <h1>Bienvenido!</h1>
+        <h3>usos del conversor
+            <p >{{ user.subscriptionId === 9 ? 'Conversiones Ilimitadas' : 'Conversiones restantes: ' + (remainingConversions < 0 ? 0 : remainingConversions) + ' actualize a premiun para conversiones ilimitadas' }}</p>
+        </h3>
+    </div>
+</div>

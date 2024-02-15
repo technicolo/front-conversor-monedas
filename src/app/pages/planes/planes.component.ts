@@ -37,6 +37,10 @@ export class PlanesComponent implements OnInit {
     price: "",
   };
 
+  retrocederPagina(): void {
+    window.history.go(-1);
+  }
+
   getSubscriptionClass(subscription: ISubscription): string {
     // Utiliza el nombre de la suscripción para determinar la clase dinámica
     switch (subscription.name) {

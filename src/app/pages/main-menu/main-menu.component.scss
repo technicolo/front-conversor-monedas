@@ -1,1 +1,60 @@
-@use './../../public/components/tabs/tabs.component.scss' ;
+@use "./../../../assets/styles/variables.scss";
+
+.fondo-conversor {
+    background-color: #464646;
+    text-align: center;
+    height: 100vw;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around; /* Distribuir espacio uniformemente alrededor de los elementos */
+    align-items: center;
+}
+.divisor{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #464646;
+    color: #464646;
+}
+
+.contador-usos{
+    background-color:  #D9D9D9;
+    height: 50%;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+#mon-fav{
+    display: flex;
+    flex-direction: column;
+    width: 94px;
+    height: 45px;
+}
+
+
+
+#paddingg{
+
+    padding-top: 20px;
+
+}
+
+h3{
+    display: flex;
+    background-color: #D9D9D9;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
