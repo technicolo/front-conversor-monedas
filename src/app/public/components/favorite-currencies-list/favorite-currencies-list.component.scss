@@ -77,16 +77,10 @@
     }
   }
   
-  .table tbody tr:nth-child(odd) {
-    background-color: variables.$color-principal-300; 
-  }
-  
-  .table tbody tr:nth-child(even) {
-    background-color: variables.$color-principal-100; 
-}
+
 
 .cancelar-btn {
-    background-color: variables.$color-principal-200;
+    background-color: variables.$color-input-plan-premiun;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
