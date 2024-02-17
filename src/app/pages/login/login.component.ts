@@ -39,7 +39,7 @@ export class LoginComponent {
             setTimeout(() => {
               this.router.navigate(["/private/conversor"]);
               this.cargando.set(false); 
-            }, 1000);
+            }, 100);
           }
       } else {
         setTimeout(() => {

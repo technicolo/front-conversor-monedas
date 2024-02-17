@@ -1,21 +1,24 @@
-<div class="container">
-    <div class="form-container">
-      <h1>Iniciar sesión</h1>
-      <p>Ingresá tus credenciales para acceder al servicio de contactos.</p>
-      <form #loginForm="ngForm" (ngSubmit)="login()" class="registro-form">
-        <label for="Email" class="sr-only">Email</label>
+
+
+  <div class="center">
+    <h1>money converter</h1>
+    <form  #loginForm="ngForm" (ngSubmit)="login()" class="registro-form">
+      <div class="inputbox">
         <input type="text" name="Email" id="Email" [(ngModel)]="loginData.Email" #Email="ngModel"
-               placeholder="Email" autocomplete="email" required>
+        placeholder="Email" autocomplete="email" required>
         <p *ngIf="Email.invalid && (Email.dirty || Email.touched)" class="error">Este campo es requerido</p>
-  
-        <label for="Password" class="sr-only">Contraseña</label>
+        <span>Email</span>
+      </div>
+      <div class="inputbox">
         <input type="Password" name="Password" id="Password" placeholder="Password"
-               autocomplete="current-Password" required minlength="5" [(ngModel)]="loginData.Password" #Password="ngModel">
+        autocomplete="current-Password" required minlength="5" [(ngModel)]="loginData.Password" #Password="ngModel">
         <p class="error" *ngIf="Password.invalid && (Password.dirty || Password.touched)">La contraseña debe tener al menos 8 caracteres</p>
-  
-        <button type="submit" [disabled]="loginForm.invalid">Iniciar sesión</button>
+        <span>Password</span>
+      </div>
+      <div class="inputbox">
+        <input type="submit" [disabled]="loginForm.invalid">
         <p class="escondido error">Error al iniciar sesión</p>
-      </form>
-      <p>¿Todavía no tenés una cuenta? - <a [routerLink]="['/register']" routerLinkActive="router-link-active">Registrate</a></p>
-    </div>
+      </div>
+    </form>
+    <p class="link" >¿Todavía no tenés una cuenta? - <a [routerLink]="['/register']" routerLinkActive="router-link-active">Registrate</a></p>
   </div>

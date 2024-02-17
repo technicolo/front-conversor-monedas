@@ -210,17 +210,15 @@ export class ConversorComponent {
         return;
     }
 
-    // Simular la conversión utilizando las monedas de origen y destino
-    const simulatedResult = this.simulateConversion(this.conversion.originalAmount, sourceCurrency, targetCurrency);
 
+    
     // Preparar los detalles de la conversión para mostrar en la alerta
     const confirmacion = await Swal.fire({
         title: 'Confirmar conversión',
         html: `
             <p>Moneda de origen: ${sourceCurrency.name}</p>
             <p>Moneda de destino: ${targetCurrency.name}</p>
-            <p>Monto a convertir: ${this.conversion.originalAmount}</p>
-            <p>Resultado simulado: ${simulatedResult}</p>
+            <p>Monto a convertir: ${this.conversion.originalAmount} ${sourceCurrency.name}</p>
         `,
         icon: 'question',
         showCancelButton: true,
@@ -234,16 +232,5 @@ export class ConversorComponent {
     }
 }
   
-  simulateConversion(originalAmount: number, sourceCurrency: Currency, targetCurrency: Currency): number {
-    // Obtener la tasa de conversión desde la moneda de origen a USD
-    const rateToUSD = sourceCurrency.value;
 
-    // Obtener la tasa de conversión desde USD a la moneda de destino
-    const rateFromUSD = targetCurrency.value;
-
-    // Calcular el resultado simulado de la conversión
-    const simulatedResult = (originalAmount * rateToUSD) / rateFromUSD;
-
-    return simulatedResult;
-}
 }
