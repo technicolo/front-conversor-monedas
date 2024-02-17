@@ -4,5 +4,35 @@
         <h3>usos del conversor
             <p >{{ user.subscriptionId === 9 ? 'Conversiones Ilimitadas, Gracias por comprar premiun!' : 'Conversiones restantes: ' + (remainingConversions < 0 ? 0 : remainingConversions) + ' actualize a premiun para conversiones ilimitadas' }}</p>
         </h3>
+        <div class="tab-hist-container">
+            <div class="tab-money-content">
+                <h2>Historial</h2>
+
+                <!-- Tabla -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>moneda a convertir</th>
+                            <th>moneda convertida</th>
+                            <th>Monto inicial</th>
+                            <th>Resultado</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let conversion of conversions() | paginate: { id:'p2', itemsPerPage: 5, currentPage: p2 }">
+                            <td>{{conversion.sourceCurrencyName}}</td>
+                            <td>{{conversion.targetCurrencyName}}</td>
+                            <td>{{conversion.originalAmount}}</td>
+                            <td>{{conversion.convertedAmount}}</td>
+                            <td>{{conversion.date | date:'yyyy-MM-dd'}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="paginate">
+                    <pagination-controls  id="p2" (pageChange)="p2 = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

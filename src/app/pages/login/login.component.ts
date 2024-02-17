@@ -33,7 +33,7 @@ export class LoginComponent {
         const subsId = this.authService.getSubscriptionId()
           console.log(subsId);
           if(subsId == "10") {
-            this.router.navigate(["/planes"]);
+            this.router.navigate(["/start/planes"]);
             this.cargando.set(false); 
           } else {
             setTimeout(() => {

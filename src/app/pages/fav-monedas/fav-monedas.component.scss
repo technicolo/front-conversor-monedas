@@ -112,8 +112,8 @@ h1{
         font-weight: 700;
     }
 
+
 .tab-money-container{
-   
     border-radius: 10px;
     padding: 20px 0;
     width: 100%;
@@ -168,17 +168,15 @@ button {
     button {
         height: 15%;
         cursor: pointer;
-        background-color: #464646;
+        background-color: #000000;
     }
     i {
         font-size: 14px;
     }
   }
-  
-
 
 .tab-hist-container{
-
+    background: linear-gradient(45deg, greenyellow, rgb(104, 120, 136));
     border-radius: 10px;
     padding: 20px 0;
     width: 100%;

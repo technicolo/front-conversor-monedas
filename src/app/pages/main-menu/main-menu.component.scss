@@ -22,28 +22,21 @@
 }
 
 .contador-usos{
-    background-color:  #D9D9D9;
+    background: linear-gradient(45deg,  rgb(215, 215, 215),#464646,);
     height: 50%;
     width: 75%;
     display: flex;
     justify-content: center;
     display: flex;
     flex-direction: column;
+    border-radius: 5%;
 }
-
-
-
-
-
 #mon-fav{
     display: flex;
     flex-direction: column;
     width: 94px;
     height: 45px;
 }
-
-
-
 #paddingg{
 
     padding-top: 20px;
@@ -52,9 +45,87 @@
 
 h3{
     display: flex;
-    background-color: #D9D9D9;
+
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
   
+
+::ng-deep {
+    .ngx-pagination .current {
+        padding: 0.1875rem 0.625rem;
+        background: variables.$color-principal-200 !important;
+        color: #000000 !important;
+        cursor: default;
+    }
+    .ngx-pagination a {
+        color: #000000 !important;
+        cursor: pointer;
+    }
+    
+}
+
+
+@media screen and (max-width: 721px) {
+    .card {
+        width: 90vw;
+    }
+    *{
+        font-size: 10px;
+    }
+}
+.tab-money-content{
+    color: rgb(0, 0, 0);
+    padding: 0 20px;
+}
+
+    .paginate {
+        width: 100%;
+        text-align: end;  
+    }
+
+.header-moneda {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    button {
+        background-color: #343434;
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+    i {
+        text-align: center;
+        font-size: 18px;
+        color: white;
+    }
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+  }
+  
+  .table th {
+    padding-left: 3%;
+    text-align: start;
+    color: rgb(0, 0, 0); 
+    padding-bottom: 10px; 
+  }
+  
+  .table td {
+    padding: 10px;
+    button {
+        height: 15%;
+        cursor: pointer;
+        background-color: #464646;
+    }
+    i {
+        font-size: 14px;
+    }
+  }
