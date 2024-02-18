@@ -1,18 +1,21 @@
 <div class="container">
     <div class="fondo-login">
-        <div class="card" *ngFor="let subscription of subscriptions" >
-            <button class="card-button" (click)="editUserSubscription(subscription.id)" [class]="getSubscriptionClass(subscription)">
-            <div class="card-header" >
+        <div class="card" *ngFor="let subscription of subscriptions">
+            <button class="card-button" 
+                    (click)="editUserSubscription(subscription.id)" 
+                    [class]="getSubscriptionClass(subscription)"
+                    [disabled]="user.subscriptionId === subscription.id">
+                <div class="card-header">
                     <h3 class="card-title">{{subscription.name}}</h3>
                     <p class="card-price">ARS <span>{{subscription.price}}</span>/mes</p>
-                </div>        
+                </div>
                 <div class="card-body">
                     <ul class="card-features">
-                        <li>{{subscription.id !== 9 ? "✓ Hasta "+ subscription.amountOfConversions+" conversiones por mes" : "✓ Conversiones ilimitadas"}}</li>  
+                        <li>{{subscription.id !== 9 ? "✓ Hasta " + subscription.amountOfConversions + " conversiones por mes" : "✓ Conversiones ilimitadas"}}</li>
                     </ul>
                 </div>
             </button>
         </div>
         <button (click)="retrocederPagina()" class="back">volver</button>
     </div>
-  </div>
+</div>

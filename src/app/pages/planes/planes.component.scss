@@ -13,10 +13,11 @@
 .fondo-login {
     background-color: #ccc;
     text-align: center;
-    height: 600px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     align-items: center;
 
     // Estilos para elementos dentro de fondo-login
@@ -25,20 +26,21 @@
     }
 
 
-
+    .back{
+        height: 10%;
+    }
     button {
         width: 100%;
         border: unset;
+        
     }
-    button.back{
-        padding-bottom: 20px ;
-    }
+
 }
 
 // Estilos para tarjetas de suscripción
 .card {
     width: 300px;
-    height: 160px;
+    height: 100px;
     border-radius: 15px; 
     color: variables.$color-input-plan-premiun;
     transition: transform 0.5s ease-out;
@@ -72,6 +74,8 @@
     background-color: variables.$color-input-plan-premiun;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
+    width: 300px;
+    height: 100px;
 
     &:hover {
         transform: scale(1.05); // Aumentar ligeramente el tamaño al acercar el mouse
@@ -83,7 +87,8 @@
     background-color: variables.$color-input-planes;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
-
+    width: 300px;
+    height: 100px;
     &:hover {
         transform: scale(1.05); // Aumentar ligeramente el tamaño al acercar el mouse
     }
@@ -93,7 +98,8 @@
     background-color: variables.$color-input-plan-trial;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
-
+    width: 300px;
+    height: 100px;
     &:hover {
         transform: scale(1.05); // Aumentar ligeramente el tamaño al acercar el mouse
     }
