@@ -6,7 +6,7 @@ export const usuarioSinLoguear: CanActivateFn = async (route, state) => {
   const auth = inject(AuthService);
     if(auth.token()){
     const router = inject(Router);
-    router.navigate(['conversor']);
+    router.navigate(['/private/conversor']);
     return false;
   }
   return true;

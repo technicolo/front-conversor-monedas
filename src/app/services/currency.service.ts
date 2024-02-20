@@ -39,41 +39,6 @@ export class CurrencyService {
     }
   }
 
-  async createCurrency(currency: Currency) {
-    const res = await fetch(API + 'Currency', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: 'Bearer ' + this.auth.token(),
-      },
-      body: JSON.stringify(currency),
-    });
-    console.log('CREANDO', res);
-    return res;
-  }
-
-  async editCurrency(currency: Currency): Promise<boolean> {
-    if (!currency.id) return false;
-    const res = await fetch(API + 'Currency/' + currency.id, {
-      method: 'PUT',
-      headers: {
-        'Content-type': 'application/json',
-        Authorization: 'Bearer ' + this.auth.token(),
-      },
-      body: JSON.stringify(currency),
-    });
-    return res.ok;
-  }
-
-  async deleteCurrency(currencyId: number | string): Promise<boolean> {
-    const res = await fetch(API + 'Currency/' + currencyId, {
-      method: 'DELETE',
-      headers: {
-        Authorization: 'Bearer ' + this.auth.token(),
-      },
-    });
-    return res.ok;
-  }
 
   async getFavoriteCurrencies(): Promise<Currency[]> {
     const res = await fetch(API + 'Currency/favorite', {

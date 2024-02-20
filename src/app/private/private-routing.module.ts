@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PrivateComponent } from './private.component';
+import { usuarioSinLoguear } from '../guards/usuario-sin-loguear.guard';
+import { usuarioLogueadoGuard } from '../guards/usuario-logueado.guard';
 
 const routes: Routes = [  {
   path:"",
@@ -8,16 +10,17 @@ const routes: Routes = [  {
   children:[
     {
       path:"main-menu",
-      // canActivate: [usuarioSinLoguear],
+      canActivate: [usuarioLogueadoGuard],
        loadChildren: ()=> import('./../pages/main-menu/main-menu.module').then(m => m.MainMenuModule)
       },
       {
         path:"conversor",
-        // canActivate: [usuarioSinLoguear],
+        canActivate: [usuarioLogueadoGuard],
          loadChildren: ()=> import('./../pages/conversor/conversor.module').then(m => m.ConversorModule)
       },
       {
         path:"fav-monedas",
+        canActivate: [usuarioLogueadoGuard],
         loadChildren: ()=> import('./../pages/fav-monedas/fav-monedas.module').then(m => m.FavMonedasModule)
       },
   ]

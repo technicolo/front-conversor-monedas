@@ -20,6 +20,11 @@
     background-color: #464646;
     color: #464646;
 }
+button{
+width: 50px;
+background: linear-gradient(45deg,  rgb(215, 215, 215),#464646,);
+border-radius: 15%;
+}
 
 .contador-usos{
     background: linear-gradient(45deg,  rgb(215, 215, 215),#464646,);
@@ -55,7 +60,7 @@ h3{
 ::ng-deep {
     .ngx-pagination .current {
         padding: 0.1875rem 0.625rem;
-        background: variables.$color-principal-200 !important;
+        background: variables.$color-input-plan-premiun !important;
         color: #000000 !important;
         cursor: default;
     }
@@ -78,6 +83,7 @@ h3{
 .tab-money-content{
     color: rgb(0, 0, 0);
     padding: 0 20px;
+    height: 50%;
 }
 
     .paginate {
@@ -106,6 +112,7 @@ h3{
 
 .table {
     width: 100%;
+    height: auto;
     border-collapse: collapse;
     margin-top: 20px; 
     margin-bottom: 20px;

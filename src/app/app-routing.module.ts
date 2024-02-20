@@ -1,19 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { usuarioLogueadoGuard } from './guards/usuario-logueado.guard';
+import { usuarioSinLoguear } from './guards/usuario-sin-loguear.guard';
 
 const routes: Routes = [
 
     {
       path:"private",
-      // canActivate: [usuarioSinLoguear],
+      
        loadChildren: ()=> import('./private/private.module').then(m => m.PrivateModule)
     },
     {
       path:"start",
-      // canActivate: [usuarioSinLoguear],
+      
        loadChildren: ()=> import('./start/start.module').then(m => m.StartModule)
     },
-
+    {
+      path: "",
+      redirectTo: '/start/login',
+      pathMatch: "full"
+    },
 ];
 
 @NgModule({

@@ -52,18 +52,6 @@ export class UserService extends ApiService{
     return res.ok;
   }
   
-  async editUser(user: User): Promise<boolean> {
-    if (!user.id) return false;
-    const res = await fetch(API + 'User/' + user.id, {
-      method: 'PUT',
-      headers: {
-        'Content-type': 'application/json',
-        Authorization: 'Bearer ' + this.auth.token(),
-      },
-      body: JSON.stringify(user),
-    });
-    return res.ok;
-  }
 
   async deleteUser(id: number): Promise<boolean> {
     const res = await fetch(API + 'User/' + id, {

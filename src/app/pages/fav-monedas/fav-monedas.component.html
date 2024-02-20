@@ -9,9 +9,6 @@
                 <p>{{ user.subscriptionId === 9 ? 'Ilimitadas' : (remainingConversions < 0 ? 0 : remainingConversions) }}</p>
             </div>
         </div>
-
-
-        
         <!-- Tabla monedas -->        
 
                 <div class="header-moneda">
@@ -45,7 +42,6 @@
                             <td>{{currency.value}}</td>
                             <td><button (click)="deleteFavoriteCurrency(currency.id)"><i class="fa-solid fa-trash" style="color: #ffffff;"></i>X</button></td>
                         </tr>
-
                     </tbody>
                 </table>
             </div>

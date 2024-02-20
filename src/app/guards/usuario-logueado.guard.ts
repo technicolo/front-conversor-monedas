@@ -6,7 +6,7 @@ export const usuarioLogueadoGuard: CanActivateFn =  (route, state) => {
   const auth = inject(AuthService);
   if(!auth.token()){
     const router = inject(Router);
-    router.navigate(['login']);
+    router.navigate(['/start/login']);
     return false;
   }
   return true;

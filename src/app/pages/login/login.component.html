@@ -1,6 +1,4 @@
-
-
-  <div class="center">
+ <div class="center">
     <h1>money converter</h1>
     <form  #loginForm="ngForm" (ngSubmit)="login()" class="registro-form">
       <div class="inputbox">
@@ -20,5 +18,5 @@
         <p class="escondido error">Error al iniciar sesión</p>
       </div>
     </form>
-    <p class="link" >¿Todavía no tenés una cuenta? - <a [routerLink]="['/register']" routerLinkActive="router-link-active">Registrate</a></p>
+    <p class="link" >¿Todavía no tenés una cuenta? - <a [routerLink]="['/start/register']" routerLinkActive="router-link-active">Registrate</a></p>
   </div>

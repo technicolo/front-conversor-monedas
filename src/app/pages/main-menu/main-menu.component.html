@@ -1,13 +1,13 @@
 <div class="fondo-conversor">
     <div class="contador-usos">
+        <button (click)="auth.logOut()" title="cerrar sesion"><img src="./../../../assets/images/icons/logUot.svg" alt="LogOut"><i class="logOut" ></i></button>
         <h1>Bienvenido!</h1>
         <h3>usos del conversor
-            <p >{{ user.subscriptionId === 9 ? 'Conversiones Ilimitadas, Gracias por comprar premiun!' : 'Conversiones restantes: ' + (remainingConversions < 0 ? 0 : remainingConversions) + ' actualize a premiun para conversiones ilimitadas' }}</p>
+            <p >{{ user.subscriptionId === 9 ? 'Conversiones ilimitadas, Gracias por comprar premiun!' : 'Conversiones restantes: ' + (remainingConversions < 0 ? 0 : remainingConversions) + ' actualize a premiun para conversiones ilimitadas' }}</p>
         </h3>
         <div class="tab-hist-container">
             <div class="tab-money-content">
                 <h2>Historial</h2>
-
                 <!-- Tabla -->
                 <table class="table">
                     <thead>
