@@ -20,6 +20,10 @@ const routes: Routes = [
       redirectTo: '/start/login',
       pathMatch: "full"
     },
+    {
+      path:"**",
+      loadChildren: ()=> import('./pages/error/error.module').then(m => m.ErrorModule)
+    }
 ];
 
 @NgModule({

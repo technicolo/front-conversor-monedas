@@ -61,27 +61,12 @@ export class ConversorComponent {
     date: new Date()
   }   
 
-  selectedCurrencyName: string = ''; // Variable para almacenar el nombre de la moneda seleccionada
-
-    // Método para actualizar el nombre de la moneda seleccionada
-    updateSelectedCurrencyName(currencyId: number) {
-        const selectedCurrency = this.currencies.find(currency => currency.id === currencyId);
-        if (selectedCurrency) {
-            this.selectedCurrencyName = selectedCurrency.name;
-        } else {
-            this.selectedCurrencyName = '';
-        }
-  }
-
   navegar(direccion:string){
     //Cambiar de página
     this.router.navigate([direccion])
     console.log(direccion)
   }
 
-
-
-    
   // Método que se ejecuta al iniciar el componente
   async ngOnInit() {
     try {
@@ -159,7 +144,7 @@ export class ConversorComponent {
       Swal.fire({
         title: "No tienes conversiones disponibles",
         icon: "error",
-        footer: '<a href="/subscription">Ir a suscripción</a>'
+        footer: '<a href="/start/planes">Ir a suscripción</a>'
     });
     }
     // Realizar la conversión
@@ -227,7 +212,6 @@ export class ConversorComponent {
     });
 
     if (confirmacion.isConfirmed) {
-        // Realizar la conversión
         this.convert();
     }
 }

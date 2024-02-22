@@ -45,7 +45,7 @@ export class LoginComponent {
         setTimeout(() => {
           this.cargando.set(false);
           this.errorLogin.set(true); // Detiene el cargador después de 1 segundo si hay un error
-        }, 2000);
+        }, 1000);
       };
     })
     .catch(error => {

@@ -97,8 +97,7 @@ export class PlanesComponent implements OnInit {
       // Si el usuario confirma, realizar la edición de la suscripción
       if (result.isConfirmed) {
         this.userService.editUserSubscription(userId, subscriptionId).then((res) => {
-          if (res) {
-            // Redirigir al usuario a la página de inicio de sesión
+          if (res) {     
             this.router.navigate(['/private/conversor']);
           } else {
             // Mostrar un mensaje de error en caso de fallo

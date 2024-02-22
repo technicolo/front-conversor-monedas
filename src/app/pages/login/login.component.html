@@ -10,7 +10,7 @@
       <div class="inputbox">
         <input type="Password" name="Password" id="Password" placeholder="Password"
         autocomplete="current-Password" required minlength="5" [(ngModel)]="loginData.Password" #Password="ngModel">
-        <p class="error" *ngIf="Password.invalid && (Password.dirty || Password.touched)">La contraseña debe tener al menos 8 caracteres</p>
+        <p class="error" *ngIf="Password.invalid && (Password.dirty || Password.touched)">La contraseña debe tener al menos 5 caracteres</p>
         <span>Password</span>
       </div>
       <div class="inputbox">

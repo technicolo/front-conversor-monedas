@@ -38,6 +38,7 @@ export class MainMenuComponent {
    editingMode = signal(false);
    p1: number = 1;
    p2: number = 1;
+   
  
    user: UserSubscription = {
      subscriptionId: 0
@@ -52,20 +53,11 @@ export class MainMenuComponent {
    };
  
    async ngOnInit() {
-
- 
-     // Lista de monedas no favoritas
-     await this.getNonFavoriteCurrencies();
  
      // Lista de conversiones realizadas
      this.conversionService.getAllConversions().then(res => {
        this.conversions.set(res);
        console.log(this.conversions());
-     })
-     // Suscripciones
-     this.subscriptionService.getAll().then(res => {
-       this.subscriptions.set(res);
-       console.log(this.subscriptions);
      })
  
      // Obtener el ID del usuario autenticado
@@ -98,31 +90,5 @@ export class MainMenuComponent {
      }
      return 0;
    }
-
-
-   async getNonFavoriteCurrencies() {
-     try {
-       // Obtener todas las monedas
-       const allCurrencies = await this.currencyService.getAllCurrencies();
- 
-       // Obtener las monedas favoritas
-       const favoriteCurrencies = await this.currencyService.getFavoriteCurrencies();
- 
-       // Filtrar las monedas que no son favoritas
-       this.noFavoriteCurrencies.set(allCurrencies.filter(currency =>
-         !favoriteCurrencies.some(favCurrency => favCurrency.id === currency.id)
-       ));
- 
-       console.log(this.noFavoriteCurrencies);
-     } catch (error) {
-       console.error('Error al obtener las monedas no favoritas:', error);
-     }
-   }
- 
-   async fetchCurrencies() {
-     this.currencyService.getFavoriteCurrencies().then(res => { this.favoriteCurrencies.set(res) });
-     await this.getNonFavoriteCurrencies()
-   }
-   //#endregion
  }
  

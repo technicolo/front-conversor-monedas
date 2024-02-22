@@ -28,18 +28,6 @@ export class UserService extends ApiService{
     return await res.json();
   }
 
-  async createUser(user: User): Promise<boolean> {
-    const res = await fetch(API + 'User', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: 'Bearer ' + this.auth.token(),
-      },
-      body: JSON.stringify(user),
-    });
-    return res.ok;
-  }
-
   async editUserSubscription(userId: number, subscriptionId: number): Promise<boolean> {
     const res = await fetch(API + 'User/' + userId, {
       method: 'PATCH',
@@ -52,14 +40,4 @@ export class UserService extends ApiService{
     return res.ok;
   }
   
-
-  async deleteUser(id: number): Promise<boolean> {
-    const res = await fetch(API + 'User/' + id, {
-      method: 'DELETE',
-      headers: {
-        Authorization: 'Bearer ' + this.auth.token(),
-      },
-    });
-    return res.ok;
-  }
 }

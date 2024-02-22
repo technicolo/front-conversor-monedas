@@ -104,65 +104,6 @@ export class FavMonedasComponent implements OnInit {
     }
     return 0;
   }
-  //#endregion
-
-  //#region Suscripciones
-  activateEditMode() {
-    this.editingMode.set(true);
-  }
-
-  // Método para confirmar la edición
-  confirmEdit() {
-    // Lógica para confirmar la edición, si es necesario
-    this.editingMode.set(false); // Desactivar el modo de edición después de confirmar
-  }
-
-  // Método para cancelar la edición
-  cancelEdit() {
-    this.editingMode.set(false); // Desactivar el modo de edición
-  }
-
-  // Editar la suscripcion
-  async editUserSubscription(subscriptionId: number) {
-    // Obtener el ID del usuario autenticado
-    const userId = this.auth.getUserId();
-
-    // Obtener detalles de la suscripción seleccionada
-    const subscription = await this.subscriptionService.getSubscriptionById(subscriptionId);
-  
-
-    // Manejar el caso de un usuario no autenticado
-    if (!userId) return;
-
-    Swal.fire({
-      title: 'Has seleccionado la suscripción ' + subscription?.name,
-      showCancelButton: true,
-      confirmButtonColor: '#5E807F',
-      cancelButtonColor: '#b7b7b7',
-      cancelButtonText: 'Volver',
-      confirmButtonText: 'Continuar',
-    }).then((result) => {
-      // Si el usuario confirma, realizar la edición de la suscripción
-      if (result.isConfirmed) {
-        this.userService.editUserSubscription(userId, subscriptionId).then((res) => {
-          if (res) {
-            // Redirigir al usuario a la página de inicio de sesión
-            this.router.navigate(['/login']);
-          } else {
-            // Mostrar un mensaje de error en caso de fallo
-            Swal.fire(
-              'Ha ocurrido un error al seleccionar tu suscripción',
-              'Intenta nuevamente.',
-              'error'
-            );
-          }
-        });
-      }
-    });
-  }
-  //#endregion
-
-  //#region Monedas Favoritas
 
   // Eliminar una moneda de la lista de monedas favoritas
   async deleteFavoriteCurrency(currencyId: number) {
@@ -198,6 +139,6 @@ export class FavMonedasComponent implements OnInit {
     this.currencyService.getFavoriteCurrencies().then(res => { this.favoriteCurrencies.set(res) });
     await this.getNonFavoriteCurrencies()
   }
-  //#endregion
+  
 }
 

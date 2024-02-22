@@ -18,7 +18,7 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let currency of noFavoriteCurrencies">
-                        <td><button (click)="addFavoriteCurrency(currency.id); refresh.emit()"><i style="color: #ffffff;">+</i></button></td>
+                        <td><button (click)="addFavoriteCurrency(currency.id); refresh.emit()"><i style="color: #000000;">+</i></button></td>
                         <td>{{currency.name}}</td>
                         <td>{{currency.symbol}}</td>
                         <td>{{currency.value}}</td>
