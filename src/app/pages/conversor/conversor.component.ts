@@ -186,8 +186,8 @@ export class ConversorComponent {
   
   async confirmarConversion() {
     // Obtener la moneda de origen y destino
-    const sourceCurrency = this.currencies.find(currency => currency.id === this.conversion.sourceCurrencyId);
-    const targetCurrency = this.currencies.find(currency => currency.id === this.conversion.targetCurrencyId);
+    const sourceCurrency = this.currencies.find(currency => currency.id === Number(this.conversion.sourceCurrencyId));
+const targetCurrency = this.currencies.find(currency => currency.id === Number(this.conversion.targetCurrencyId));
 
     // Validar que se encontraron ambas monedas
     if (!sourceCurrency || !targetCurrency) {
