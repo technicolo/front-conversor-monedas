@@ -3,7 +3,7 @@
 .fondo-conversor {
     background-color: #464646;
     text-align: center;
-    height: 100vw;
+    height: 89vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -28,7 +28,7 @@ border-radius: 15%;
 
 .contador-usos{
     background: linear-gradient(45deg,  rgb(215, 215, 215),#464646,);
-    height: 50%;
+    height: 85vh;
     width: 75%;
     display: flex;
     justify-content: center;
@@ -50,10 +50,12 @@ border-radius: 15%;
 
 h3{
     display: flex;
-
     justify-content: center;
     align-items: center;
+    font-weight: bold; // también podés usar 700
+    font-size: 25px;
     flex-direction: column;
+    margin-bottom: 5%;
 }
   
 

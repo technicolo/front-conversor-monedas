@@ -1,26 +1,33 @@
+#container {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  height: 1%;
+}
 
-#container{
-    display: flex;
-    justify-content: space-around;
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 10px 10px 0 0;
-    overflow: hidden;
-    height: 5%;
-  }
-  
-  .tab{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    svg{
-      display: block;
-      margin: auto;
-      transition: 200ms ease-in-out;
-    }
+.tab {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 200ms ease-in-out;
+
+  svg {
+    display: block;
+    margin: auto;
     transition: 200ms ease-in-out;
   }
+
   
-  .seleccionado{
-    background-color: rgba(180, 0, 159, 0.231); ;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2); 
+    cursor: pointer; // hace que parezca más clickeable
+    transform: scale(1.05); 
   }
+}
+
+.seleccionado {
+  background-color: rgba(180, 0, 159, 0.231);
+}
